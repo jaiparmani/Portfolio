@@ -63,7 +63,11 @@
 	input {
 		font-size: 11pt;
 	}
+	.loader{
+		margin-top:200%;
+	}
 }
+
 * {
 	font-smoothing: antialiased;
 	font-smoothing: grayscale;
@@ -90,6 +94,11 @@
 		background-color 0.5s ease;
 	transition: opacity 1s ease, backdrop-filter 0.8s ease,
 		background-color 0.5s ease, -webkit-backdrop-filter 0.8s ease;
+}
+@media screen and (max-width: 767px) {
+	.loader {
+		margin-top: 20%;
+	}
 }
 .balls {
 	--ballcolor: #ffffff;
