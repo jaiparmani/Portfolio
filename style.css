@@ -868,3 +868,30 @@ button.submit:hover {
 	height: 100%;
 	z-index: -2;
 }
+
+.invisible-footer {
+	left: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0);
+	/* Transparent background */
+	z-index: 9999;
+	/* Ensure it stays above other content */
+}
+
+.social-icons {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.social-icons li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.social-icons img {
+	width: 40px;
+	/* Adjust icon size as needed */
+	height: auto;
+}
