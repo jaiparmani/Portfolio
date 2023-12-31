@@ -8,7 +8,27 @@ setTimeout(() => {
 		loader.style.display = "none";
 		document.body.style.overflow = "visible";
 	}, 1000);
+
 }, 5000);
+
+function typeWriterEffect(text, i, speed) {
+	if (i < text.length) {
+		document.querySelector(".type-writer-text").innerHTML += text.charAt(i);
+		i++;
+		setTimeout(function () {
+			typeWriterEffect(text, i, speed);
+		}, speed);
+	}
+}
+
+// Text to display with typewriter effect
+var textToType = "Software Engineer";
+
+// Start the typewriter effect after a delay of 1 second (1000 milliseconds)
+setTimeout(function () {
+	typeWriterEffect(textToType, 0, 100); // Adjust speed (in milliseconds) here
+}, 6000);
+
 
 // =======================================  NAVIGATE ====================================== //
 
