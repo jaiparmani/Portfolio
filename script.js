@@ -9,7 +9,7 @@ setTimeout(() => {
 		document.body.style.overflow = "visible";
 	}, 1000);
 
-}, 5000);
+}, 1000);
 
 function typeWriterEffect(text, i, speed) {
 	if (i < text.length) {
@@ -270,4 +270,36 @@ particlesJS("particles-js", {
 			}
 		}
 	}
+});
+// Wait for the DOM content to be loaded
+document.addEventListener('DOMContentLoaded', function () {
+	// Add event listener for mouseover on elements with class "tricky"
+	document.querySelectorAll('.tricky').forEach(function (element) {
+		element.addEventListener('mouseover', function () {
+			// Set random left and top positions using inline styles
+			element.style.left = (Math.random() * 90 ) + '%';
+			element.style.top = Math.random() * 90 + 200 + '%';
+		});
+	});
+
+	// Add event listener for hover on elements with class "btn-wrap"
+	document.querySelectorAll('.btn-wrap').forEach(function (element) {
+		element.addEventListener('mouseenter', function () {
+			// Toggle the "active" class
+			element.classList.add('active');
+		});
+		element.addEventListener('mouseleave', function () {
+			// Toggle the "active" class
+			element.classList.remove('active');
+		});
+	});
+
+	// Add touchstart event for elements with class "tricky"
+	document.querySelectorAll('.tricky').forEach(function (element) {
+		element.addEventListener('touchstart', function () {
+			// Set random left and top positions using inline styles
+			element.style.left = Math.random() * 90 + '%';
+			element.style.top = Math.random() * 90 + '%';
+		});
+	});
 });
