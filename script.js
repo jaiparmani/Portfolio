@@ -19,14 +19,19 @@ function typeWriterEffect(text, i, speed) {
 			typeWriterEffect(text, i, speed);
 		}, speed);
 	}
+	else{
+		window.location = "./terminal/index.html"
+
+	}
 }
 
 // Text to display with typewriter effect
-var textToType = "Software Engineer";
+var textToType = "Loading.....";
 
 // Start the typewriter effect after a delay of 1 second (1000 milliseconds)
 setTimeout(function () {
-	typeWriterEffect(textToType, 0, 100); // Adjust speed (in milliseconds) here
+	 typeWriterEffect(textToType, 0, 100); // Adjust speed (in milliseconds) here
+
 }, 6000);
 
 
